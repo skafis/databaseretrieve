@@ -4,6 +4,6 @@ from django.db import models
 from django import forms
 
 # Create your models here
-class View (models.Model):
+class View (forms.Form):
     message = forms.CharField(required=False)
     
