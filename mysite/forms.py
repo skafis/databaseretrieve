@@ -5,6 +5,7 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = View
         fields = [
-            "name",
-            "message"
+             "title",
+             "location",
+            "description"
         ]
