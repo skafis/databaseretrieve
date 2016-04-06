@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
     <body>
-            <h1>display list</h1>
-            {% for obj in object_list %}
+            <h1>present opportunities</h1>
+            <div>
+                
+                {% for obj in object_list %}
+                <hr>
+                    <h1><a href "{% url 'show_list' %}">{{obj.title}}</a></h1>
+                    <h5>{{obj.location}}<br/></h5>
+                    <p>{{obj.description}}<br/></p>
+                <hr>
+                {% endfor %}
+                <hr>
+            </div>
             
-            {{obj.name}}<br/>
-            {{obj.message}}<br/>
-            
-            {% endfor %}
    
         <form method='POST' action''>{% csrf_token%}
              {{ form.as_p }}

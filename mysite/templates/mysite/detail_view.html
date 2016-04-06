@@ -1,0 +1,11 @@
+{% block content %}
+    <div class="post">
+        {% if obj.published_date %}
+            <div class="date">
+                {{ obj.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ obj.title }}</h1>
+        <p>{{ obj.description }}</p>
+    </div>
+{% endblock %}
