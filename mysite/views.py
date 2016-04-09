@@ -9,7 +9,7 @@ def show_list(request):
     form = PostForm( request.POST or None)
     if form.is_valid():
         instance = form.save(commit=False)
-        # print form.cleaned_data.get("message")
+        print form.cleaned_data.get("description")
         instance.save()
     # if request.method == "POST":
     #     print request.POST.get("name")
